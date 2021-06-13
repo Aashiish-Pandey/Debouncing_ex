@@ -1,23 +1,5 @@
-let counter = 0;
+// flattning the nested array
 
-const showData = () => {
-  console.log(`counter value : ${counter++}`);
-};
+const arr = [1,2,[1,2,[2,3,[4,5]]]]
 
-showData();
-
-const debounce = function(delay) {
-  let timer;
-
-  return function () {
-
-    clearTimeout(timer)
-    let contex = this;
-
-    timer = setTimeout(() => {
-      showData.apply(contex);
-    }, delay);
-  };
-};
-
-betterFunction = debounce(300)
+console.log(arr.flat(Infinity))
